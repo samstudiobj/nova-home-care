@@ -1,4 +1,5 @@
 # NOVA Home Care
+Live-demo: https://nova-home-care.netlify.app/
 
 A fictional local cleaning and property-care business in Cotonou, Benin — built as a portfolio case study demonstrating full-cycle frontend work: business definition, brand direction, UX/IA, content strategy, a design system, and implementation in semantic HTML, CSS, and vanilla JavaScript.
 
