@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Free Quote — NOVA Home Care</title>
+  <meta name="description" content="Tell us what needs cleaning. We respond within 2 business hours.">
+  <link rel="alternate" hreflang="en" href="quote.html">
+  <link rel="alternate" hreflang="fr" href="fr/quote.html">
+  <link rel="alternate" hreflang="x-default" href="quote.html">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utilities.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__bar">
+      <a href="index.html" class="wordmark">NOVA</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <nav class="lang-switch" aria-label="Change language">
+          <span aria-current="true">EN</span>
+          <span class="lang-switch__divider">|</span>
+          <a href="fr/quote.html" lang="fr" hreflang="fr">FR</a>
+        </nav>
+        <a class="whatsapp-link" href="https://wa.me/22900000000">WhatsApp Us</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
+          <span class="nav-toggle__icon"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu">
+    <button class="nav-drawer__close" type="button" aria-label="Close menu">&times;</button>
+    <ul class="nav-drawer__list">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <div class="nav-drawer__actions">
+      <a class="btn btn--secondary" href="https://wa.me/22900000000">WhatsApp Us</a>
+    </div>
+    <nav class="lang-switch nav-drawer__lang" aria-label="Change language">
+      <span aria-current="true">English</span>
+      <span class="lang-switch__divider">|</span>
+      <a href="fr/quote.html" lang="fr" hreflang="fr">Français</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <section class="section">
+      <div class="container" style="max-width: 640px;">
+
+        <div id="quote-intro">
+          <div class="section-heading">
+            <h1>Request a Free Quote</h1>
+            <p class="section-heading__lede">Tell us what needs cleaning. We respond within 2 business hours.</p>
+          </div>
+
+          <ol class="quote-progress" aria-hidden="true">
+            <li>Service</li>
+            <li>Property</li>
+            <li>Frequency</li>
+            <li>Preferred date</li>
+            <li>Location</li>
+            <li>Contact &amp; notes</li>
+            <li>Review</li>
+          </ol>
+          <p class="quote-progress-compact" id="quote-progress-compact" role="status" aria-live="polite"></p>
+        </div>
+
+        <form id="quote-form">
+
+          <div class="quote-step is-active" data-step="1">
+            <fieldset>
+              <legend>What do you need cleaned?</legend>
+              <p class="step-help">Not sure? Pick the closest match — we'll confirm details after.</p>
+              <ul class="option-list">
+                <li><label class="option-row"><span><input type="radio" name="service" value="Regular Cleaning" required> Regular Cleaning</span></label></li>
+                <li><label class="option-row"><span><input type="radio" name="service" value="Deep Cleaning"> Deep Cleaning</span></label></li>
+                <li><label class="option-row"><span><input type="radio" name="service" value="Move-In/Move-Out"> Move-In / Move-Out</span></label></li>
+                <li><label class="option-row"><span><input type="radio" name="service" value="Short-Term Rental Turnover"> Short-Term Rental Turnover</span></label></li>
+                <li><label class="option-row"><span><input type="radio" name="service" value="Office Cleaning"> Office Cleaning</span></label></li>
+              </ul>
+            </fieldset>
+            <div class="step-actions">
+              <span></span>
+              <button type="button" class="btn btn--primary quote-next">Continue</button>
+            </div>
+          </div>
+
+          <div class="quote-step" data-step="2">
+            <fieldset>
+              <legend>Tell us about the space.</legend>
+              <p class="step-help">This helps us give you an accurate starting estimate.</p>
+              <div class="field">
+                <label for="property-type">Property type</label>
+                <select id="property-type" name="property-type" required>
+                  <option value="">Select property type</option>
+                  <option>Apartment</option>
+                  <option>House</option>
+                  <option>Office</option>
+                  <option>Rental</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="property-size">Size</label>
+                <select id="property-size" name="property-size" required>
+                  <option value="">Select size</option>
+                  <option>Studio / 1 bedroom</option>
+                  <option>2 bedrooms</option>
+                  <option>3 bedrooms</option>
+                  <option>4+ bedrooms</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="condition-note">Anything we should know about the space? (optional)</label>
+                <textarea id="condition-note" name="condition-note"></textarea>
+              </div>
+            </fieldset>
+            <div class="step-actions">
+              <button type="button" class="btn btn--secondary quote-back">Back</button>
+              <button type="button" class="btn btn--primary quote-next">Continue</button>
+            </div>
+          </div>
+
+          <div class="quote-step" data-step="3">
+            <fieldset>
+              <legend>How often?</legend>
+              <ul class="option-list">
+                <li><label class="option-row">
+                  <span><input type="radio" name="frequency" value="One-time" required> One-time</span>
+                </label></li>
+                <li><label class="option-row">
+                  <span><input type="radio" name="frequency" value="Weekly"> Weekly</span>
+                  <span class="option-row__discount">Save 15%</span>
+                </label></li>
+                <li><label class="option-row">
+                  <span><input type="radio" name="frequency" value="Biweekly"> Biweekly</span>
+                  <span class="option-row__discount">Save 10%</span>
+                </label></li>
+                <li><label class="option-row">
+                  <span><input type="radio" name="frequency" value="Monthly"> Monthly</span>
+                  <span class="option-row__discount">Save 5%</span>
+                </label></li>
+              </ul>
+            </fieldset>
+            <div class="step-actions">
+              <button type="button" class="btn btn--secondary quote-back">Back</button>
+              <button type="button" class="btn btn--primary quote-next">Continue</button>
+            </div>
+          </div>
+
+          <div class="quote-step" data-step="4">
+            <fieldset>
+              <legend>When works best?</legend>
+              <p class="step-help">This is your preferred date — we'll confirm availability when we respond.</p>
+              <div class="field">
+                <label for="preferred-date">Preferred date</label>
+                <input type="date" id="preferred-date" name="preferred-date" required>
+              </div>
+              <fieldset>
+                <legend style="font-size: var(--text-base); font-weight: var(--weight-medium); font-family: var(--font-body);">Time of day (optional)</legend>
+                <ul class="option-list">
+                  <li><label class="option-row"><span><input type="radio" name="time-preference" value="Morning"> Morning</span></label></li>
+                  <li><label class="option-row"><span><input type="radio" name="time-preference" value="Afternoon"> Afternoon</span></label></li>
+                </ul>
+              </fieldset>
+            </fieldset>
+            <div class="step-actions">
+              <button type="button" class="btn btn--secondary quote-back">Back</button>
+              <button type="button" class="btn btn--primary quote-next">Continue</button>
+            </div>
+          </div>
+
+          <div class="quote-step" data-step="5">
+            <fieldset>
+              <legend>Where in Cotonou?</legend>
+              <p class="step-help">Just the area for now — we'll only ask for your exact address once your visit is confirmed.</p>
+              <div class="field">
+                <label for="area">Neighborhood / area</label>
+                <input type="text" id="area" name="area" required>
+              </div>
+              <div class="field">
+                <label for="exact-address">Exact address (optional — only if you're comfortable sharing it now)</label>
+                <input type="text" id="exact-address" name="exact-address">
+              </div>
+            </fieldset>
+            <div class="step-actions">
+              <button type="button" class="btn btn--secondary quote-back">Back</button>
+              <button type="button" class="btn btn--primary quote-next">Continue</button>
+            </div>
+          </div>
+
+          <div class="quote-step" data-step="6">
+            <fieldset>
+              <legend>How should we reach you?</legend>
+              <p class="step-help">We'll reach out this way first.</p>
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name">
+              </div>
+              <div class="field">
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel">
+              </div>
+              <div class="field">
+                <label for="email">Email (optional)</label>
+                <input type="email" id="email" name="email" autocomplete="email">
+              </div>
+              <fieldset>
+                <legend style="font-size: var(--text-base); font-weight: var(--weight-medium); font-family: var(--font-body);">Preferred contact method (optional)</legend>
+                <ul class="option-list">
+                  <li><label class="option-row"><span><input type="radio" name="contact-method" value="Phone call"> Phone call</span></label></li>
+                  <li><label class="option-row"><span><input type="radio" name="contact-method" value="WhatsApp"> WhatsApp</span></label></li>
+                </ul>
+              </fieldset>
+              <div class="field">
+                <label for="notes">Additional notes (optional)</label>
+                <textarea id="notes" name="notes"></textarea>
+              </div>
+            </fieldset>
+            <div class="step-actions">
+              <button type="button" class="btn btn--secondary quote-back">Back</button>
+              <button type="button" class="btn btn--primary quote-next">Continue</button>
+            </div>
+          </div>
+
+          <div class="quote-step" data-step="7">
+            <fieldset>
+              <legend>Review your request.</legend>
+              <p class="step-help">Here's everything you've told us. Ready to send it?</p>
+              <dl class="review-rows" id="review-rows"></dl>
+            </fieldset>
+            <div class="step-actions">
+              <button type="button" class="btn btn--secondary quote-back">Back</button>
+              <span></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block" id="quote-submit">Send My Request</button>
+          </div>
+
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="confirmation" id="confirmation" tabindex="-1">
+          <h1 tabindex="-1">Request received.</h1>
+          <p>Thanks, <span id="confirmation-name">there</span>. Here's what happens next.</p>
+
+          <ul class="confirmation-checklist">
+            <li class="is-done">
+              <span class="confirmation-checklist__mark" aria-hidden="true">&check;</span>
+              <span>Request received — just now</span>
+            </li>
+            <li>
+              <span class="confirmation-checklist__mark" aria-hidden="true">&ndash;</span>
+              <span>NOVA reviews your details — within 2 business hours</span>
+            </li>
+            <li>
+              <span class="confirmation-checklist__mark" aria-hidden="true">&ndash;</span>
+              <span>We confirm your date and price — by phone or WhatsApp, your choice</span>
+            </li>
+            <li>
+              <span class="confirmation-checklist__mark" aria-hidden="true">&ndash;</span>
+              <span>Clean &rarr; Quality Check &rarr; Done — on the day</span>
+            </li>
+          </ul>
+
+          <dl class="review-rows confirmation-summary">
+            <div class="review-row"><dt>Service</dt><dd id="confirmation-service"></dd></div>
+            <div class="review-row"><dt>Property</dt><dd id="confirmation-property"></dd></div>
+            <div class="review-row"><dt>Frequency</dt><dd id="confirmation-frequency"></dd></div>
+            <div class="review-row"><dt>Preferred date</dt><dd id="confirmation-date"></dd></div>
+            <div class="review-row"><dt>Area</dt><dd id="confirmation-area"></dd></div>
+            <div class="review-row"><dt>Contact</dt><dd id="confirmation-contact"></dd></div>
+          </dl>
+
+          <p style="margin-top: var(--space-3);">We respond within 2 business hours during operating hours.</p>
+          <p style="margin-top: var(--space-2);"><a class="btn btn--secondary" href="https://wa.me/22900000000">Want to talk sooner? Message us on WhatsApp</a></p>
+          <p style="margin-top: var(--space-3);">
+            <a class="link-quiet" href="index.html">Back to homepage</a>
+            &middot;
+            <a class="link-quiet" href="quote.html">Start a new quote</a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-group footer-brand">
+          <p class="wordmark">NOVA</p>
+          <p class="footer-brand__statement">Reliable home and property cleaning in Cotonou — checked, every time.</p>
+        </div>
+        <div class="footer-group">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h2>Company</h2>
+          <ul>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h2>Contact &amp; Hours</h2>
+          <ul>
+            <li><a href="https://wa.me/22900000000">WhatsApp</a></li>
+            <li><a href="tel:+22900000000">+229 00 00 00 00</a></li>
+            <li><a href="mailto:hello@novahomecare.example">hello@novahomecare.example</a></li>
+            <li>Cotonou &amp; nearby areas</li>
+            <li>Mon–Sat, 7:30 AM–6:00 PM</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">NOVA Home Care is a fictional case study built for portfolio purposes. Testimonials and imagery are illustrative placeholder content, not records of a real business.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/quote.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* NOVA Home Care — Layout: container, grid, section rhythm */
+
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter-mobile);
+}
+
+@media (min-width: 768px) {
+  .container { padding-inline: var(--gutter-tablet); }
+}
+
+@media (min-width: 1024px) {
+  .container { padding-inline: var(--gutter-desktop); }
+}
+
+@media (min-width: 1280px) {
+  .container { padding-inline: var(--gutter-wide); }
+}
+
+/* Each section carries half the intended rhythm on top and bottom, so two
+   adjacent sections sum to the full intended gap (e.g. 48px + 48px = 96px
+   on desktop) instead of doubling it (96px + 96px = 192px). The first/last
+   section against the hero/footer reads slightly tighter as a result, which
+   is fine — the hero and footer already provide their own separation. */
+.section {
+  padding-block: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .section { padding-block: var(--space-4); }
+}
+
+@media (min-width: 1024px) {
+  .section { padding-block: var(--space-5); }
+}
+
+.section-heading {
+  margin-bottom: var(--space-3);
+  max-width: 55ch;
+}
+
+@media (min-width: 1024px) {
+  .section-heading { margin-bottom: var(--space-4); }
+}
+
+.section-heading__eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-mono);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-1);
+}
+
+.section-heading__lede {
+  font-size: var(--text-md);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-2);
+  max-width: 55ch;
+}
+
+/* Two-column layout (hero, About intro) */
+.split {
+  display: grid;
+  gap: var(--space-4);
+}
+
+@media (min-width: 1024px) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--space-6);
+  }
+}
+
+.split--reverse { direction: rtl; }
+.split--reverse > * { direction: ltr; }
+
+/* Reusable content grids */
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.grid--2 { grid-template-columns: 1fr; }
+@media (min-width: 768px) {
+  .grid--2 { grid-template-columns: 1fr 1fr; }
+}
+
+.grid--3 { grid-template-columns: 1fr; }
+@media (min-width: 768px) {
+  .grid--3 { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1024px) {
+  .grid--3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+.grid--4 { grid-template-columns: 1fr; }
+@media (min-width: 768px) {
+  .grid--4 { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1024px) {
+  .grid--4 { grid-template-columns: repeat(4, 1fr); }
+}

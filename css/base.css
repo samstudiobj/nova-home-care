@@ -1,0 +1,201 @@
+/* NOVA Home Care — Base: reset, defaults, fonts, accessibility baseline */
+
+/* Font faces — sourced from Google Fonts (SIL Open Font License), see
+   README.md for exact source URLs. Fraunces and Work Sans are variable
+   fonts: Google serves one file per family covering the whole weight
+   axis, so the 500/600 (and 400/500/600) rules below correctly point to
+   the same file each — the browser renders the requested weight from
+   that file's variation axis. IBM Plex Mono ships as separate static
+   files per weight, hence two distinct files there. */
+@font-face {
+  font-family: 'Fraunces';
+  src: url('../assets/fonts/fraunces-variable.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fraunces';
+  src: url('../assets/fonts/fraunces-variable.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/fonts/work-sans-variable.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/fonts/work-sans-variable.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/fonts/work-sans-variable.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('../assets/fonts/ibm-plex-mono-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('../assets/fonts/ibm-plex-mono-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-base);
+  letter-spacing: var(--tracking-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  color: var(--color-text-primary);
+}
+
+h1 {
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-display);
+}
+
+h2 {
+  font-size: var(--text-xl);
+}
+
+h3 {
+  font-size: var(--text-lg);
+}
+
+p {
+  max-width: 65ch;
+}
+
+small {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration-color: transparent;
+  text-underline-offset: 0.15em;
+  transition: text-decoration-color var(--duration-fast) var(--easing-standard);
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+/* Buttons — normalized to plain text by default; visual button
+   treatment (primary/secondary/supporting) is a Phase-4+ component concern */
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Media */
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Forms */
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+input, textarea, select, button {
+  accent-color: var(--color-primary);
+}
+
+/* Lists — unstyled by default; components opt back into markers where the
+   content is genuinely a list a screen reader should announce as such */
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Focus — visible only for keyboard interaction, never suppressed */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* Selection */
+::selection {
+  background: var(--color-selection-bg);
+  color: var(--color-text-primary);
+}
+
+/* Reduced motion baseline — the one deliberate global !important in this
+   codebase. It exists to guarantee every future component's transition/
+   animation is neutralized under this media query without requiring each
+   one to remember an individual override. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,62 @@
+/* NOVA Home Care — Utilities */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-2);
+  z-index: 300;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: var(--weight-medium);
+  transition: top var(--duration-fast) var(--easing-standard);
+}
+
+.skip-link:focus {
+  top: var(--space-2);
+}
+
+/* Marks content still pending a real business fact (price, hours, contact
+   detail). Never shown as an error — reads as "not yet confirmed," not broken. */
+.tbd {
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  letter-spacing: var(--tracking-mono);
+}
+
+.text-secondary { color: var(--color-text-secondary); }
+.text-muted { color: var(--color-text-muted); }
+
+/* Placeholder for photography not yet produced for this project */
+.media-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-mono);
+  padding: var(--space-3);
+}

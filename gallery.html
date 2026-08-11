@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — NOVA Home Care</title>
+  <meta name="description" content="A look at the work — before, during, and after.">
+  <link rel="alternate" hreflang="en" href="gallery.html">
+  <link rel="alternate" hreflang="fr" href="fr/gallery.html">
+  <link rel="alternate" hreflang="x-default" href="gallery.html">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/utilities.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container site-header__bar">
+      <a href="index.html" class="wordmark">NOVA</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <nav class="lang-switch" aria-label="Change language">
+          <span aria-current="true">EN</span>
+          <span class="lang-switch__divider">|</span>
+          <a href="fr/gallery.html" lang="fr" hreflang="fr">FR</a>
+        </nav>
+        <a class="whatsapp-link" href="https://wa.me/22900000000">WhatsApp Us</a>
+        <a class="btn btn--primary" href="quote.html">Request a Free Quote</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="Open menu">
+          <span class="nav-toggle__icon"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Menu">
+    <button class="nav-drawer__close" type="button" aria-label="Close menu">&times;</button>
+    <ul class="nav-drawer__list">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <div class="nav-drawer__actions">
+      <a class="btn btn--secondary" href="https://wa.me/22900000000">WhatsApp Us</a>
+      <a class="btn btn--primary btn--block" href="quote.html">Request a Free Quote</a>
+    </div>
+    <nav class="lang-switch nav-drawer__lang" aria-label="Change language">
+      <span aria-current="true">English</span>
+      <span class="lang-switch__divider">|</span>
+      <a href="fr/gallery.html" lang="fr" hreflang="fr">Français</a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h1>A look at the work</h1>
+          <p class="section-heading__lede">Before, during, and after. Captions describe what changed for screen-reader readers — the images themselves are placeholder content pending final portfolio photography.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <button type="button" class="gallery-item">
+            <img class="gallery-item__media" src="assets/images/gallery-move-in-move-out.jpg" alt="An empty, freshly cleaned living room ready for move-in" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gallery-item__caption">Move-Out Cleaning &middot; Cotonou — before and after, full apartment turnover</span>
+          </button>
+          <button type="button" class="gallery-item">
+            <img class="gallery-item__media" src="assets/images/gallery-deep-cleaning.jpg" alt="An open-plan kitchen and living area with clean countertops" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gallery-item__caption">Deep Cleaning &middot; Cotonou — kitchen surfaces before and after</span>
+          </button>
+          <button type="button" class="gallery-item">
+            <img class="gallery-item__media" src="assets/images/gallery-short-term-rental.jpg" alt="A tidy gray and white sofa set staged for guests" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gallery-item__caption">Short-Term Rental Turnover &middot; Cotonou — guest-ready living area</span>
+          </button>
+          <button type="button" class="gallery-item">
+            <img class="gallery-item__media" src="assets/images/gallery-regular-cleaning.jpg" alt="A calm living room with a beige couch and armchair" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gallery-item__caption">Regular Cleaning &middot; Cotonou — routine upkeep visit</span>
+          </button>
+          <button type="button" class="gallery-item">
+            <img class="gallery-item__media" src="assets/images/gallery-office-cleaning.jpg" alt="A small modern office desk with wooden accents" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gallery-item__caption">Office Cleaning &middot; Cotonou — small workspace</span>
+          </button>
+          <button type="button" class="gallery-item">
+            <img class="gallery-item__media" src="assets/images/gallery-process.jpg" alt="A neat living room in soft natural light" width="800" height="600" loading="lazy" decoding="async">
+            <span class="gallery-item__caption">Process &middot; Cotonou — quality check against the checklist</span>
+          </button>
+        </div>
+
+        <p style="margin-top: var(--space-4);"><a class="btn btn--primary" href="quote.html">Request a Free Quote</a></p>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image">
+    <div class="lightbox__content">
+      <button type="button" class="lightbox__close" aria-label="Close">&times;</button>
+      <img class="lightbox__image" src="" alt="" style="aspect-ratio: 4/3; width: 100%; border-radius: var(--radius-lg); object-fit: cover;" decoding="async">
+      <p class="lightbox__caption text-secondary" style="margin-top: var(--space-2);"></p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-group footer-brand">
+          <p class="wordmark">NOVA</p>
+          <p class="footer-brand__statement">Reliable home and property cleaning in Cotonou — checked, every time.</p>
+          <a class="btn btn--primary" href="quote.html">Request a Free Quote</a>
+        </div>
+        <div class="footer-group">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h2>Company</h2>
+          <ul>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h2>Contact &amp; Hours</h2>
+          <ul>
+            <li><a href="https://wa.me/22900000000">WhatsApp</a></li>
+            <li><a href="tel:+22900000000">+229 00 00 00 00</a></li>
+            <li><a href="mailto:hello@novahomecare.example">hello@novahomecare.example</a></li>
+            <li>Cotonou &amp; nearby areas</li>
+            <li>Mon–Sat, 7:30 AM–6:00 PM</li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">NOVA Home Care is a fictional case study built for portfolio purposes. Testimonials and imagery are illustrative placeholder content, not records of a real business.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+</body>
+</html>
